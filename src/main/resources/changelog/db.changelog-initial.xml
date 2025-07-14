@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="mirac.guntogar" id="2025-07-12-1">
+        <createTable tableName="user">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true" primaryKeyName="user_pkey"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="surname" type="VARCHAR(255)"/>
+            <column name="tc_no" type="VARCHAR(255)"/>
+            <column name="user_type" type="VARCHAR(255)"/>
+        </createTable>
+
+        <insert tableName="user">
+            <column name="tc_no" value="99999999999"/>
+            <column name="name" value="Admin"/>
+            <column name="surname" value="ADMIN"/>
+            <column name="email" value="admin@admin.com"/>
+            <column name="password" value="$2a$10$Z/rHjgpA106vitNTKU85J.GgTqFB8edj.XVDH0CIp8X/h8ldwCe0m"/>
+            <column name="user_type" value="ADMIN"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
