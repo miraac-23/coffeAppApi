@@ -44,3 +44,11 @@ docker run --name coffe-postgres \
 
 mvn clean install
 mvn spring-boot:run
+
+Uygulamada default tanımlı admin bilgileri;
+
+username: admin@admin.com
+password: 123123
+
+Uygulamada admin,kullanıcı ve editör bulunuyor.
+Admin tüm işlemleri yapabilirken kullanıcı ve editör yalnızca kahve sipariş işlemleri yapabiliyor.
